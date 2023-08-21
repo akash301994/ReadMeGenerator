@@ -40,6 +40,10 @@ function generateMarkdown(data) {
   return `# ${data.title}
   ${renderLicenseSection(data.license)}
   
+  ## License
+  This project is licensed under the [${data.license} License](${renderLicenseLink(data.license)}). 
+  ${renderLicenseBadge(data.license)}
+
   ## Description
   ${data.description}
   
@@ -49,6 +53,17 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   
-  ##`;
+  ## Contributors
+  ${data.contributors}
+
+  ## Testing
+  ${data.test}
+
+  ## Contact
+  Github: [${data.contat}](https://github.com/${data.contact})
+  Emil: ${data.email}
+  
+  `;
 }
 
+module.exports = {generateMarkdown}; 
