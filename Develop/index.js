@@ -20,7 +20,7 @@ const questions = [
     type: "list",
     name: "license",
     message: "Please select the license used in your project.",
-    choices: ["MIT", "APACHE2.0", "Boost1.0", "none"],
+    choices: ["MIT", "APACHE", "Boost", "none"],
     validate: (lisenceInput) => () => {
       if (lisenceInput) {
         return true;
