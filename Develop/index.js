@@ -17,6 +17,18 @@ const questions = [
     },
   },
   {
+    type: "list",
+    name: "license",
+    message: "Please select the license used in your project.",
+    choices: ["MIT", "APACHE2.0", "Boost1.0", "none"],
+    validate: (lisenceInput) => () => {
+      if (lisenceInput) {
+        return true;
+      } else console.log("Please select one of the options");
+      return false;
+    },
+  },
+  {
     type: "input",
     name: "description",
     message: "Description",
@@ -35,6 +47,17 @@ const questions = [
       if (usageInput) {
         return true;
       } else console.log("Please give a description");
+      return false;
+    },
+  },
+  {
+    type: "input",
+    name: "intallation",
+    message: "Please explain how to install your project",
+    validate: (installationInput) => {
+      if (installationInput) {
+        return true;
+      } else console.log("Please explain how to install your project.");
       return false;
     },
   },
@@ -69,18 +92,6 @@ const questions = [
       if (contactInput) {
         return true;
       } else console.log("Please input your Github username");
-      return false;
-    },
-  },
-  {
-    type: "list",
-    name: "license",
-    message: "Please select the license used in your project.",
-    choices: ["MIT", "APACHE2.0", "Boost1.0", "none"],
-    validate: (lisenceInput) => () => {
-      if (lisenceInput) {
-        return true;
-      } else console.log("Please select one of the options");
       return false;
     },
   },
