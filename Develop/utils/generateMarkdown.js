@@ -3,10 +3,8 @@
 function renderLicenseBadge(license) {
   const lisenceBadges = {
     MIT: "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
-    APACHE:
-      "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)",
-    Boost:
-      "[![License: Boost 1.0](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
+    APACHE: "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)",
+    Boost: "[![License: Boost 1.0](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
     none: "", // set for empty string incase there are no badges used.
   };
 
@@ -37,7 +35,8 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return `
+  # ${data.title}
   ${renderLicenseSection(data.license)}
   
   ## License
@@ -60,7 +59,7 @@ function generateMarkdown(data) {
   ${data.test}
 
   ## Contact
-  Github: [${data.contat}](https://github.com/${data.contact})
+  Github: [${data.contact}](https://github.com/${data.contact})
   Emil: ${data.email}
   
   `;
